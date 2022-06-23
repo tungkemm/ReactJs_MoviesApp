@@ -1,0 +1,25 @@
+import React from "react";
+import { useSelector } from "react-redux";
+import { getMoviesSelector } from "../../features/selectors";
+import MovieCard from "../MovieCard/MovieCard";
+
+const MovieListing = () => {
+  const movies = useSelector(getMoviesSelector);
+
+  return (
+    <div>
+      {movies.Response === "True" ? (
+        movies.Search.map((movie, index) => (
+          <>
+            <h2>Movies</h2>
+            <MovieCard key={index} data={movie} />
+          </>
+        ))
+      ) : (
+        <h3>{movies.Error}</h3>
+      )}
+    </div>
+  );
+};
+
+export default MovieListing;
