@@ -39,7 +39,7 @@ const Header = () => {
           id: Math.floor(Math.random() * 100000),
           item: inputSearch,
         })
-      );
+      ); a
 
       setInputSearch("");
     } else {
@@ -79,7 +79,7 @@ const Header = () => {
       <div
         className="logo"
         onClick={() => {
-          navigate("/");
+          navigate("/movies-app");
         }}
       >
         Movie App
