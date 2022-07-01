@@ -75,6 +75,7 @@ const movieSlice = createSlice({
     },
     [fetchAsyncMoiveOrShowDetail.fulfilled]: (state, action) => {
         console.log("Success detail");
+        // console.log(action.payload)
         return { ...state, selectMovieOrShow: action.payload };
     },
   },
